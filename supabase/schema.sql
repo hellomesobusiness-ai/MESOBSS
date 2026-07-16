@@ -2,7 +2,7 @@
 
 -- Users (managed by Supabase Auth, extended here)
 CREATE TABLE IF NOT EXISTS profiles (
-  id UUID PRIMARY KEY REFERENCES auth.id,
+  id UUID PRIMARY KEY REFERENCES auth.users(id),
   email TEXT,
   full_name TEXT,
   avatar_url TEXT,
